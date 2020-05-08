@@ -1,4 +1,4 @@
-package net.munki;
+package net.munki.jaxb;
 
 public class Main {
 
