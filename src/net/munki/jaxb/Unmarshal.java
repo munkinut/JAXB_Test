@@ -11,7 +11,7 @@ public class Unmarshal {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello from JAXB_Test.");
+        System.out.println("JAXB_Test Unmarshal...\n");
 
         try {
 

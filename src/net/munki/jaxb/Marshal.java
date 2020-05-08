@@ -11,7 +11,7 @@ public class Marshal {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello from JAXB_Test.");
+        System.out.println("JAXB_Test Marshal...\n");
 
         Users users = new Users();
 
