@@ -1,6 +1,7 @@
 package net.munki.jaxb;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -25,8 +26,10 @@ public class Unmarshal {
             // this will create Java object - country from the XML file
             Users users = (Users) jaxbUnmarshaller.unmarshal(XMLfile);
 
-            System.out.println("User Name: " + users.getUser());
-
+            ArrayList<User> userList = users.getUsers();
+            for(User user:userList) {
+                System.out.println("User: " + user.getName() + " aged " + user.getAge());
+            }
 
         } catch (JAXBException e) {
             // some exception occured

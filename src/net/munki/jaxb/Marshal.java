@@ -1,6 +1,7 @@
 package net.munki.jaxb;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -13,7 +14,20 @@ public class Marshal {
         System.out.println("Hello from JAXB_Test.");
 
         Users users = new Users();
-        users.setUser("munki");
+
+        ArrayList<User> userList = new ArrayList<>();
+
+        User user1 = new User();
+        user1.setName("munki");
+        user1.setAge(50);
+        userList.add(user1);
+
+        User user2 = new User();
+        user2.setName("javamunk");
+        user2.setAge(35);
+        userList.add(user2);
+
+        users.setUsers(userList);
 
         try {
 

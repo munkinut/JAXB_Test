@@ -1,26 +1,27 @@
 package net.munki.jaxb;
 
 import javax.xml.bind.annotation.XmlElement;
-//import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
-//import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
 
 @XmlRootElement
 public class Users {
 
-    private String user;
+    private ArrayList<User> users;
 
     public Users() {
-        user = "";
+        users = new ArrayList<>();
     }
 
-    public String getUser() {
-        return this.user;
+    public ArrayList<User> getUsers() {
+        return this.users;
     }
 
-    @XmlElement
-    public void setUser(String user) {
-        this.user = user;
+    // XmLElementWrapper generates a wrapper element around XML representation
+    // XmlElement sets the name of the entities in collection
+    @XmlElement(name = "user")
+    public void setUsers(ArrayList<User> users) {
+        this.users = users;
     }
 
 }
