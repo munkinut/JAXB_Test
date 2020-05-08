@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="JAXB_Test:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JAXB_Test_jar</output-path>
+    <root id="root">
+      <element id="archive" name="JAXB_Test.jar">
+        <element id="module-output" name="JAXB_Test" />
+      </element>
+      <element id="library" level="project" name="codemodel" />
+    </root>
+  </artifact>
+</component>
